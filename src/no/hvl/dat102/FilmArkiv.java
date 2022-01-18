@@ -75,10 +75,12 @@ public class Filmarkiv implements FilmarkivADT {
         return this.antall;
     }
 
+    // Sjekker om det er plass
     private boolean harPlass() {
         return this.antall < this.filmer.length;
     }
 
+    // Utvider tabellen
     private void utvid() {
 
         Film[] ny = new Film[this.filmer.length * 2];
@@ -89,6 +91,7 @@ public class Filmarkiv implements FilmarkivADT {
         this.filmer = ny;
     }
 
+    // Finner index til en film gitt ved filmnr
     private int finn(int filmnr) {
         for (int i = 0; i < this.antall; i++) {
             if (filmnr == this.filmer[i].getFilmNr()) {
