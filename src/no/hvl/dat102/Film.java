@@ -69,8 +69,9 @@ public class Film extends Object {
 		this.filmSelskap = filmSelskap;
 	}
 
-	public boolean equals(Film film) {
-		return this.filmNr == film.getFilmNr();
+	@Override
+	public boolean equals(Object film) {
+		return this.filmNr == ((Film) film).getFilmNr();
 	}
 
 	@Override
