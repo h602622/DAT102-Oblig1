@@ -1,6 +1,6 @@
 package no.hvl.dat102;
 
-public class Film {
+public class Film extends Object {
 
     private int filmNr;
     private String filmSkaper;
@@ -72,4 +72,10 @@ public class Film {
     public boolean equals(Film film) {
         return this.filmNr == film.getFilmNr();
     }
+
+	@Override 
+	public int hashCode() { 
+		Integer temp = this.filmNr; 
+		return temp.hashCode(); 
+	}
 }
