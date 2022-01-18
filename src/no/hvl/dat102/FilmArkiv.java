@@ -14,9 +14,13 @@ public class Filmarkiv implements FilmarkivADT {
         this.antall = 0;
     }
 
-    // TODO
     public void visFilm(int nr) {
-
+        int idx = finn(nr);
+        if (idx < 0) {
+            return;
+        }
+        Film f = this.filmer[idx];
+        System.out.println(f.toString());
     }
 
     public void leggTilFilm(Film nyFilm) {
@@ -49,6 +53,21 @@ public class Filmarkiv implements FilmarkivADT {
 
         for (int i = 0; i < antall; i++) {
             if (this.filmer[i].getTittel().contains(delstreng)) {
+                matcher.add(this.filmer[i]);
+            }
+        }
+
+        Film[] arr = new Film[matcher.size()];
+        arr = matcher.toArray(arr);
+        return arr;
+    }
+
+    public Film[] soekFilmprodusent(String delstreng) {
+
+        ArrayList<Film> matcher = new ArrayList<Film>();
+
+        for (int i = 0; i < antall; i++) {
+            if (this.filmer[i].getFilmSkaper().contains(delstreng)) {
                 matcher.add(this.filmer[i]);
             }
         }

@@ -73,9 +73,21 @@ public class Film extends Object {
         return this.filmNr == film.getFilmNr();
     }
 
-	@Override 
-	public int hashCode() { 
-		Integer temp = this.filmNr; 
-		return temp.hashCode(); 
-	}
+    @Override
+    public int hashCode() {
+        Integer temp = this.filmNr;
+        return temp.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                " filmNr='" + getFilmNr() + "'" +
+                ", filmSkaper='" + getFilmSkaper() + "'" +
+                ", tittel='" + getTittel() + "'" +
+                ", lanseringsAr='" + getLanseringsAr() + "'" +
+                ", sjanger='" + getSjanger() + "'" +
+                ", filmSelskap='" + getFilmSelskap() + "'" +
+                "}";
+    }
 }
