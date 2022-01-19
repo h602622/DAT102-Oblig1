@@ -26,6 +26,7 @@ public class Tekstgrensesnitt {
 			sjangerSomInt = skaffNummer(sc, "Velg sjanger fra lista: ");
 		} while (sjangerSomInt < 0 || sjangerSomInt >= Sjanger.values().length);
 
+		sc.close();
 		return new Film(filmnr, filmskaper, tittel, lansering, Sjanger.values()[sjangerSomInt], filmselskap);
 	}
 
