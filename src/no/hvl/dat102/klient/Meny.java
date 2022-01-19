@@ -35,5 +35,9 @@ public class Meny {
 		this.filmarkiv.leggTilFilm(filmFem);
 		this.filmarkiv.leggTilFilm(filmSeks);
 		this.filmarkiv.leggTilFilm(filmSyv);
+
+		this.filmarkiv.leggTilFilm(tekstgr.lesFilm());
+
+		System.out.println(this.filmarkiv.toString());
 	}
 }

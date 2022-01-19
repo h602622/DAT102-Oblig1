@@ -93,6 +93,14 @@ public class Filmarkiv implements FilmarkivADT {
 		return this.antall;
 	}
 
+	public String toString() {
+		String out = "";
+		for (int i = 0; i < this.antall; i++) {
+			out += this.filmer[i].toString() + "\n";
+		}
+		return out;
+	}
+
 	// Sjekker om det er plass
 	private boolean harPlass() {
 		return this.antall < this.filmer.length;
