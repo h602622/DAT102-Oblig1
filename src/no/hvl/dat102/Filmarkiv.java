@@ -14,6 +14,7 @@ public class Filmarkiv implements FilmarkivADT {
 		this.antall = 0;
 	}
 
+	@Override
 	public void visFilm(int nr) {
 		int idx = finn(nr);
 		if (idx < 0) {
@@ -24,6 +25,7 @@ public class Filmarkiv implements FilmarkivADT {
 		System.out.println(f.toString());
 	}
 
+	@Override
 	public void leggTilFilm(Film nyFilm) {
 		if (!harPlass()) {
 			utvid();
@@ -33,6 +35,7 @@ public class Filmarkiv implements FilmarkivADT {
 		this.antall++;
 	}
 
+	@Override
 	public boolean slettFilm(int filmnr) {
 		int idx = finn(filmnr);
 		if (idx < 0) {
@@ -49,6 +52,7 @@ public class Filmarkiv implements FilmarkivADT {
 		return true;
 	}
 
+	@Override
 	public Film[] soekTittel(String delstreng) {
 		ArrayList<Film> matcher = new ArrayList<Film>();
 
@@ -63,6 +67,7 @@ public class Filmarkiv implements FilmarkivADT {
 		return arr;
 	}
 
+	@Override
 	public Film[] soekFilmprodusent(String delstreng) {
 		ArrayList<Film> matcher = new ArrayList<Film>();
 
@@ -78,6 +83,7 @@ public class Filmarkiv implements FilmarkivADT {
 		return arr;
 	}
 
+	@Override
 	public int antall(Sjanger sjanger) {
 		int counter = 0;
 		for (int i = 0; i < this.antall; i++) {
@@ -89,10 +95,12 @@ public class Filmarkiv implements FilmarkivADT {
 		return counter;
 	}
 
+	@Override
 	public int antall() {
 		return this.antall;
 	}
 
+	@Override
 	public String toString() {
 		String out = "";
 		for (int i = 0; i < this.antall; i++) {
