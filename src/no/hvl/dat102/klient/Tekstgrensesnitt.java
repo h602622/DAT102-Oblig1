@@ -51,8 +51,8 @@ public class Tekstgrensesnitt {
 	}
 
 	// vise en film med alle opplysninger på skjerm (husk tekst for sjanger)
-	public void visFilm(Film film) {
-		System.out.println(film.toString());
+	public void visFilm(FilmarkivADT filma, int nr) {
+		filma.visFilm(nr);
 	}
 
 	// Skrive ut alle Filmer med en spesiell delstreng i tittelen
