@@ -31,4 +31,3 @@ public class LinearNode<T> {
 		return this.element;
 	}
 }
-
